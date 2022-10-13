@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/maquetacion.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="js/practicaDom.js"></script>
 </head>
 <body>
     <div id="contenedor">
@@ -27,18 +28,30 @@
                 <form>
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <th colspan="2" style="text-align: center;" ><label for="login" class="col-form-label">Login</label></th>
+                            <th colspan="2" style="text-align: center;" ><label for="login" class="col-form-label">Servicio Agua</label></th>
                         </tr>
                         <tr>
-                            <th><label for="identificador" class="col-form-label">Identificador:</label></th>
-                            <td><input type="text" name="identificador" id="identificador" class="form-control"></td>
+                            <th><label for="nombre" class="col-form-label">Nombre Usuario:</label></th>
+                            <td><input type="text" name="nombre" id="nombre" class="form-control"></td>
                         </tr>
                         <tr>
-                            <th><label for="clave" class="col-form-label">Contraseña: </label></th>
-                            <td><input type="password" name="clave" id="clave" class="form-control" ></td>
+                            <th><label for="nombre" class="col-form-label">Estrato:</label></th>
+                            <td>
+                                <select  name="estrato" id="estrato" class="form-select">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>                              
+                            </td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: center;"><button class="btn btn-primary form-control">Ingresar</button></td>
+                            <th><label for="consumo" class="col-form-label">Consumo del mes:</label></th> 
+                            <td><input type="number" name="consumo" id="consumo" class="form-control"></td>   
+                        </tr>
+                        <tr>
+                            <td colspan="2" style="text-align: center;"><button class="btn btn-primary form-control" onclick="calcularServicio()">Procesar</button></td>   
                         </tr>
                     </table>
 
